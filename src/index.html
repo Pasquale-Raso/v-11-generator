@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bottle Crurated</title>
+  </head>
+  <body>
+    <!---------------------- Sidebar ----------------------->
+    <div class="application">
+      <div class="sectionSidebar">
+        <!-- Action Bottle -->
+        <div class="SelectSection">
+          <div class="Model3D">3D</div>
+          <div class="refresh">&circlearrowright;</div>
+          <button id="screenshot-button">
+            <img src="../static/img/fotocamera.png" style="width: 20px" />
+          </button>
+        </div>
+
+        <!-- TypeBottle -->
+        <div class="Box_TypeBottle_Pannel">
+          <h2 class="Title_TypeBottle">Select Type Bottle</h2>
+          <div class="Type_bottle">
+            <div id="content_Type_bottle" class="content_Type_bottle"></div>
+          </div>
+        </div>
+
+        <!-- ColorBottle -->
+        <div class="Box_ColorBottle_Pannel">
+          <h2 class="Title_ColorBottle">Select Color Bottle</h2>
+          <div class="Container-Color">
+            <!-- Color -->
+            <div class="selectColorBottle">
+              <h5>
+                <hr style="margin-bottom: 10px" />
+                Color
+              </h5>
+              <p><span id="TextValueBottleColor"></span></p>
+              <input
+                id="my_Select_Color_Bottle"
+                value="#ffffff"
+                class="Bottle_Color_Select"
+                type="color"
+              />
+            </div>
+            <div class="container_custom_material">
+              <!-- Transmission -->
+              <div class="Box_Bottle_Transmission_Select">
+                <h5>Transmission</h5>
+                <p>
+                  <span id="TextValueBottleTransmission"></span>
+                </p>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0"
+                  class="Bottle_Transmission_Select"
+                  id="my_Select_Transmission_Bottle"
+                />
+              </div>
+              <!-- Roughness -->
+              <div class="Box_Bottle_Roughness_Select">
+                <h5>Roughness</h5>
+                <p><span id="TextValueBottleRoughness"></span></p>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0"
+                  class="Bottle_Roughness_Select"
+                  id="my_Select_Roughness_Bottle"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capsule_Pannel -->
+        <div class="Capsule_Pannel">
+          <div class="Box_Capsule_Pannel">
+            <!-- Capsule -->
+            <h2 class="Title_Capsule">Select the type of capsule</h2>
+            <!-- Type Capsule -->
+            <div class="TypeCapsule">
+              <div class="Container-Box">
+                <div class="BoxAluminum">
+                  <div class="CardAluminum">
+                    <img
+                      src="../static/img/icons_capsule/Long_Aluminium.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Aluminum">Aluminum</div>
+                </div>
+
+                <div class="BoxWax">
+                  <div class="CardWax">
+                    <img
+                      src="../static/img/icons_capsule/Long_Wax.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Wax">Wax</div>
+                </div>
+
+                <div class="BoxCork">
+                  <div class="CardCork">
+                    <img
+                      src="../static/img/icons_capsule/Champagne_Cork.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Cork">Cork</div>
+                </div>
+
+                <div class="BoxChampagneCork">
+                  <div class="CardChampagneCork">
+                    <img src="../static/img/icons_capsule/Sughero.png" alt="" />
+                  </div>
+                  <div class="ChampagneCork">Champagne Cork</div>
+                </div>
+              </div>
+              <!-- Aluminum -->
+              <div style="margin-top: 10px">
+                <h4 class="textTypeAluminum">
+                  <hr style="margin-bottom: 10px" />
+                  select the type of aluminum cap
+                </h4>
+                <div class="TypeAluminum">
+                  <div class="BoxTypeAluminumShort">
+                    <div class="CardTypeAluminumShortCenter">
+                      <div class="CardTypeAluminumShort">
+                        <img
+                          src="../static/img/icons_capsule/Short_Aluminium.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="TypeAluminumShort">Short</div>
+                    </div>
+                  </div>
+                  <div class="BoxTypeAluminumLong">
+                    <div class="CardTypeAluminumLongCenter">
+                      <div class="CardTypeAluminumLong">
+                        <img
+                          src="../static/img/icons_capsule/Long_Aluminium.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="TypeAluminumLong">Long</div>
+                    </div>
+                  </div>
+                  <div class="BoxTypeAluminumChampagne">
+                    <div class="CardTypeAluminumChampagneCenter">
+                      <div class="CardTypeAluminumChampagne">
+                        <img
+                          src="../static/img/icons_capsule/Champagne_Aluminium.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="TypeAluminumChampagne">Champagne</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Wax -->
+              <div style="margin-top: 10px">
+                <h4 class="textTypeWax">
+                  <hr style="margin-bottom: 10px" />
+                  select the type of Wax cap
+                </h4>
+                <div class="TypeWax">
+                  <div class="BoxTypeWaxShort">
+                    <div class="CardTypeWaxShortCenter">
+                      <div class="CardTypeWaxShort">
+                        <img
+                          src="../static/img/icons_capsule/Short_Wax.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="TypeWaxShort">Short</div>
+                    </div>
+                  </div>
+                  <div class="BoxTypeWaxLong">
+                    <div class="CardTypeWaxLongCenter">
+                      <div class="CardTypeWaxLong">
+                        <img
+                          src="../static/img/icons_capsule/Long_Wax.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="TypeWaxLong">Long</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="selectColorCapsuel">
+                <h5>
+                  <hr style="margin-bottom: 10px" />
+                  Color
+                </h5>
+                <p><span id="TextValueCapsuleColor"></span></p>
+                <input
+                  id="my_Select_Color_Capsule"
+                  value="#ff0000"
+                  class="Capsule_Color_Select"
+                  type="color"
+                />
+                <div class="container_custom_material_capsule">
+                  <!-- Transmission -->
+                  <div class="Box_Stopper_Transmission_Select">
+                    <h5>Transmission</h5>
+                    <p><span id="TextValueStopperTransmission"></span></p>
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value="0"
+                      class="Stopper_Transmission_Select"
+                      id="my_Select_Transmission_Stopper"
+                    />
+                  </div>
+                  <!-- Roughness -->
+                  <div class="Box_Stopper_Roughness_Select">
+                    <h5>Roughness</h5>
+                    <p><span id="TextValueStopperRoughness"></span></p>
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value="0"
+                      class="Stopper_Roughness_Select"
+                      id="my_Select_Roughness_Stopper"
+                    />
+                  </div>
+                  <!-- Metalness -->
+                  <div class="Box_Stopper_Metalness_Select">
+                    <h5>Metalness</h5>
+                    <p><span id="TextValueStopperMetalness"></span></p>
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value="0"
+                      class="Stopper_Metalness_Select"
+                      id="my_Select_Metalness_Stopper"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Label_Pannel -->
+        <div class="Label_Pannel">
+          <div class="Box_Label_Pannel">
+            <h2 class="Title_Label">Label</h2>
+            <!-- Img -->
+            <input type="file" id="my_Label" />
+            <!-- progress-bar -->
+            <div id="progress-bar">
+              <div id="progress"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- acceptButtoms -->
+        <div class="acceptButtoms">
+          <div class="Color">next</div>
+          <div class="Capsule">next</div>
+          <div class="Label">next</div>
+          <div id="download-glb">Save Bottle</div>
+        </div>
+      </div>
+
+      <!------------------ three.js cavas ------------------>
+      <div class="sectionBottles">
+        <canvas class="webgl"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
